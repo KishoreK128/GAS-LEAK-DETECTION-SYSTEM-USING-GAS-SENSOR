@@ -97,4 +97,4 @@ https://github.com/user-attachments/assets/c6f1ee61-d509-46e4-bf96-80b3227d80ec
 
 
 ## Result:
-
+The gas leak detection system successfully detected the presence of gas when the sensor value exceeded the calibrated threshold of 250. The buzzer and red LED activated as a warning system, demonstrating the functionality of the prototype in simulated leak conditions.
