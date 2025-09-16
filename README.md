@@ -8,10 +8,15 @@
   Tinker CAD tool (Online)
 	Arduino UNO Board/ESP-32
   Gas sensor (MQ-2)
-	
+  
+## Schematic view:
+<img width="1087" height="829" alt="Screenshot 2025-09-16 141211" src="https://github.com/user-attachments/assets/b1e6c18c-08ed-4449-8158-e1010e888048" />
+
+
 ## Circuit Diagram:
 
- 
+ <img width="1240" height="588" alt="Screenshot 2025-09-16 141154" src="https://github.com/user-attachments/assets/c936de60-2f03-46b1-957b-4ed1d45e4b9c" />
+
 
 
 
@@ -57,10 +62,38 @@ Step 7: Save Your Work
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Program:
-
+```
+int gasSensor=A1;
+int buzzer=13;
+void setup()
+{
+  pinMode(A1, INPUT);
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  int sensorValue=analogRead(gasSensor);
+  Serial.print("GAS LEVEL:");
+  Serial.println(sensorValue);
+  delay(1000);
+  if (sensorValue>250)
+  {
+    digitalWrite(buzzer,HIGH);
+  }
+  else
+  {
+    digitalWrite(buzzer,LOW);
+  }
+}
+```
 ## Output:
 
    
+
+https://github.com/user-attachments/assets/c6f1ee61-d509-46e4-bf96-80b3227d80ec
+
+
 
 ## Result:
 
